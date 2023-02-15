@@ -1,0 +1,27 @@
+.accordion {
+    --bs-accordion-active-bg: #72002eff;
+    --bs-accordion-active-color: white;
+    --bs-accordion-btn-focus-border-color: white;
+    --bs-accordion-btn-focus-box-shadow: white;
+    --bs-accordion-btn-bg: rgb(245, 237, 244);
+}
+
+.col {
+    height: 300px;
+    margin: 25px;
+    padding: 0;
+}
+
+.col img {
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Dispositivo mobile */
+
+@media (max-width: 425px) {
+
+    .col img {
+        width: 100%;
+    }
+}

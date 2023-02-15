@@ -1,0 +1,52 @@
+.producto {
+    width: 100%;
+    text-align: center;
+}
+
+.producto div {
+    margin-left: 78px;
+    margin-right: 78px;
+    margin: auto;
+}
+
+.carrito__2 {
+    color: white;
+    background-color: #72002eff;
+    width: 250px;
+    border-radius: 8px;
+}
+
+.producto img {
+    width: 250px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.productos__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.productos__grid h2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Dispositivo mediano */
+
+@media (max-width: 768px) {
+
+    .productos__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* Dispositivo mobile */
+
+@media (max-width: 425px) {
+
+    .productos__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

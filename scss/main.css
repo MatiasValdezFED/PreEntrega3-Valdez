@@ -1,0 +1,403 @@
+@charset "UTF-8";
+/*Resources*/
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Prompt", sans-serif;
+}
+
+h1 {
+  color: white;
+  background-image: linear-gradient(#72002e, white);
+  height: 50px;
+  /* padding: 15px; */
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    padding: 2%;
+  }
+}
+/* Paleta de colores */
+/*
+claret: #72002eff;
+thistle: #dabedcff;
+african-violet: #ab85c0ff;
+old-lavender: #70566dff;
+dark-purple: #38273bff;
+*/
+/*Utilities*/
+.header {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.img__logo {
+  width: 100px;
+  padding: 1rem;
+}
+
+.navbar--principal {
+  background-color: #72002e;
+  margin-top: 8px;
+}
+
+.nav__mobile {
+  display: none;
+}
+
+.menu {
+  display: flex !important;
+  font-size: 20px;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.menu li {
+  display: inline;
+  padding: 2%;
+}
+
+.menu li:hover {
+  background-color: rgb(65, 1, 27);
+  cursor: pointer;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu--activo {
+  font-weight: bold;
+}
+
+/* Dispositivo mediano */
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+  }
+  .nav__mobile {
+    display: block;
+    background-color: #72002e;
+  }
+  .navbar--principal {
+    display: none;
+  }
+  .menu {
+    flex-direction: column;
+    font-size: 17px;
+  }
+}
+/* Dispositivo mobile */
+@media (max-width: 425px) {
+  .a__header {
+    display: flex;
+    justify-content: center;
+  }
+  .nav__mobile {
+    display: block;
+    background-color: #72002e;
+  }
+  .navbar--principal {
+    display: none;
+  }
+  .menu {
+    font-size: 12px;
+  }
+}
+.footer {
+  display: flex;
+  background-color: #38273b;
+}
+
+.footer a {
+  transform: translate(130px, 75px);
+  height: 37px;
+}
+
+.lista__footer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lista__footer li {
+  margin: 15px;
+}
+
+.lista__footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.lista__footer--activo {
+  font-weight: bold;
+}
+
+.map {
+  margin: 100px;
+}
+
+/* Dispositivo mobile */
+@media (max-width: 425px) {
+  .footer a {
+    transform: none;
+    height: 37px;
+  }
+  .map {
+    display: none;
+  }
+}
+/*Sections_scss*/
+.main__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ofertas__grid {
+  width: 100%;
+}
+
+.categorias__main_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 50%);
+  padding: 2rem;
+  gap: 0px 25px;
+  grid-template-areas: "hilos botones elasticos" "cintas lanas cierres";
+}
+
+.titulo__cat {
+  position: relative;
+  top: 65px;
+  font-weight: bold;
+  color: white;
+  font-size: 25px;
+  left: 20px;
+  z-index: 2;
+  width: 50%;
+}
+
+.hilos {
+  grid-area: hilos;
+}
+
+.hilos img {
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.botones {
+  grid-area: botones;
+}
+
+.botones img {
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.elasticos {
+  grid-area: elasticos;
+}
+
+.elasticos img {
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cintas {
+  grid-area: cintas;
+}
+
+.cintas img {
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.lanas {
+  grid-area: lanas;
+}
+
+.lanas img {
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cierres {
+  grid-area: cierres;
+}
+
+.cierres img {
+  width: 100%;
+  height: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.categorias__main_grid li {
+  justify-self: center;
+  width: 100%;
+  height: 470px;
+  margin-bottom: -133px;
+}
+
+.categorias__main_grid a {
+  text-decoration: none;
+}
+
+.categorias__main_grid p {
+  font-family: "Pacifico", cursive;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pulse__button:hover {
+  animation: pulse 2s;
+}
+
+/* Dispositivo mediano */
+@media (max-width: 768px) {
+  .main__img {
+    width: 100%;
+    object-fit_: contain;
+  }
+  .categorias__main_grid {
+    padding: 0;
+    gap: 0;
+  }
+  .ofertas__grid .categorias__main_grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, 15%);
+    grid-template-areas: "hilos" "botones" "elasticos" "cintas" "lanas" "cierres";
+  }
+  .categorias__main_grid li img {
+    width: 95%;
+    margin: auto;
+    display: block;
+  }
+  .titulo__cat {
+    left: 30px;
+  }
+}
+.producto {
+  width: 100%;
+  text-align: center;
+}
+
+.producto div {
+  margin-left: 78px;
+  margin-right: 78px;
+  margin: auto;
+}
+
+.carrito__2 {
+  color: white;
+  background-color: #72002e;
+  width: 250px;
+  border-radius: 8px;
+}
+
+.producto img {
+  width: 250px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.productos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.productos__grid h2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Dispositivo mediano */
+@media (max-width: 768px) {
+  .productos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Dispositivo mobile */
+@media (max-width: 425px) {
+  .productos__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.accordion {
+  --bs-accordion-active-bg: #72002eff;
+  --bs-accordion-active-color: white;
+  --bs-accordion-btn-focus-border-color: white;
+  --bs-accordion-btn-focus-box-shadow: white;
+  --bs-accordion-btn-bg: rgb(245, 237, 244);
+}
+
+.col {
+  height: 300px;
+  margin: 25px;
+  padding: 0;
+}
+
+.col img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Dispositivo mobile */
+@media (max-width: 425px) {
+  .col img {
+    width: 100%;
+  }
+}
+.row {
+  padding: 25px;
+}
+
+.btn-primary {
+  --bs-btn-bg: #72002eff;
+  --bs-btn-border-color: #72002eff;
+}
+
+.comprar__explicación {
+  width: 600px;
+  border: solid 15px darkmagenta;
+  background-color: darkmagenta;
+  font-weight: bold;
+}/*# sourceMappingURL=main.css.map */
