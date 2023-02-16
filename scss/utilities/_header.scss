@@ -9,7 +9,7 @@
 }
 
 .navbar--principal {
-    background-color: #72002eff;
+    background-color: $color__secundario;
     margin-top: 8px;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .menu a {
-    color: white;
+    color: $color__secundario;
     text-decoration: none;
 }
 
@@ -54,7 +54,7 @@
 
     .nav__mobile {
         display: block;
-        background-color: #72002eff;
+        background-color: $color__principal;
     }
 
     .navbar--principal {
@@ -78,7 +78,7 @@
 
     .nav__mobile {
         display: block;
-        background-color: #72002eff;
+        background-color: $color__principal;
     }
 
     .navbar--principal {

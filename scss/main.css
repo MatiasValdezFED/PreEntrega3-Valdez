@@ -2,6 +2,7 @@
 /*Resources*/
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +26,7 @@ ul {
     padding: 2%;
   }
 }
+
 /* Paleta de colores */
 /*
 claret: #72002eff;
@@ -85,35 +87,43 @@ dark-purple: #38273bff;
   .header {
     width: 100%;
   }
+
   .nav__mobile {
     display: block;
     background-color: #72002e;
   }
+
   .navbar--principal {
     display: none;
   }
+
   .menu {
     flex-direction: column;
     font-size: 17px;
   }
 }
+
 /* Dispositivo mobile */
 @media (max-width: 425px) {
   .a__header {
     display: flex;
     justify-content: center;
   }
+
   .nav__mobile {
     display: block;
     background-color: #72002e;
   }
+
   .navbar--principal {
     display: none;
   }
+
   .menu {
     font-size: 12px;
   }
 }
+
 .footer {
   display: flex;
   background-color: #38273b;
@@ -154,16 +164,18 @@ dark-purple: #38273bff;
     transform: none;
     height: 37px;
   }
+
   .map {
     display: none;
   }
 }
+
 /*Sections_scss*/
 .main__img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .ofertas__grid {
@@ -198,7 +210,7 @@ dark-purple: #38273bff;
   width: 100%;
   height: 50%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .botones {
@@ -209,7 +221,7 @@ dark-purple: #38273bff;
   width: 100%;
   height: 50%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .elasticos {
@@ -220,7 +232,7 @@ dark-purple: #38273bff;
   width: 100%;
   height: 50%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .cintas {
@@ -231,7 +243,7 @@ dark-purple: #38273bff;
   width: 100%;
   height: 50%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .lanas {
@@ -242,7 +254,7 @@ dark-purple: #38273bff;
   width: 100%;
   height: 50%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .cierres {
@@ -253,7 +265,7 @@ dark-purple: #38273bff;
   width: 100%;
   height: 50%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .categorias__main_grid li {
@@ -277,13 +289,16 @@ dark-purple: #38273bff;
   0% {
     transform: scale(1);
   }
+
   70% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
 }
+
 .pulse__button:hover {
   animation: pulse 2s;
 }
@@ -294,25 +309,30 @@ dark-purple: #38273bff;
     width: 100%;
     object-fit_: contain;
   }
+
   .categorias__main_grid {
     padding: 0;
     gap: 0;
   }
+
   .ofertas__grid .categorias__main_grid {
     width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(1, 15%);
     grid-template-areas: "hilos" "botones" "elasticos" "cintas" "lanas" "cierres";
   }
+
   .categorias__main_grid li img {
     width: 95%;
     margin: auto;
     display: block;
   }
+
   .titulo__cat {
     left: 30px;
   }
 }
+
 .producto {
   width: 100%;
   text-align: center;
@@ -335,7 +355,7 @@ dark-purple: #38273bff;
   width: 250px;
   height: 500px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .productos__grid {
@@ -354,12 +374,14 @@ dark-purple: #38273bff;
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 /* Dispositivo mobile */
 @media (max-width: 425px) {
   .productos__grid {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
 .accordion {
   --bs-accordion-active-bg: #72002eff;
   --bs-accordion-active-color: white;
@@ -377,7 +399,7 @@ dark-purple: #38273bff;
 .col img {
   height: 300px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 /* Dispositivo mobile */
@@ -386,6 +408,7 @@ dark-purple: #38273bff;
     width: 100%;
   }
 }
+
 .row {
   padding: 25px;
 }
@@ -400,4 +423,6 @@ dark-purple: #38273bff;
   border: solid 15px darkmagenta;
   background-color: darkmagenta;
   font-weight: bold;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

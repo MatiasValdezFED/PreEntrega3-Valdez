@@ -1,8 +1,8 @@
 .accordion {
-    --bs-accordion-active-bg: #72002eff;
-    --bs-accordion-active-color: white;
-    --bs-accordion-btn-focus-border-color: white;
-    --bs-accordion-btn-focus-box-shadow: white;
+    --bs-accordion-active-bg: $color__principal;
+    --bs-accordion-active-color: $color__secundario;
+    --bs-accordion-btn-focus-border-color: $color__secundario;
+    --bs-accordion-btn-focus-box-shadow: $color__secundario;
     --bs-accordion-btn-bg: rgb(245, 237, 244);
 }
 

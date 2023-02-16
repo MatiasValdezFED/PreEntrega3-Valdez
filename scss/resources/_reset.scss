@@ -5,8 +5,8 @@
 }
 
 h1 {
-    color: white;
-    background-image: linear-gradient(#72002eff, white);
+    color: $color__secundario;
+    background-image: linear-gradient($color__principal, $color__secundario);
     height: 50px;
     /* padding: 15px; */
     text-align: center;
