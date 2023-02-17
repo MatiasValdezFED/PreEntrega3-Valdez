@@ -1,32 +1,31 @@
 .footer {
     display: flex;
     background-color: #38273bff;
-}
 
-.footer a {
-    transform: translate(130px, 75px);
-    height: 37px;
+    a {
+        transform: translate(130px, 75px);
+        height: 37px;
+    }
 }
-
 
 .lista__footer {
     display: flex;
     position: relative;
     flex-direction: column;
     justify-content: center;
-}
 
-.lista__footer li {
-    margin: 15px;
-}
+    li {
+        margin: 15px;
+    }
 
-.lista__footer a {
-    color: $color__secundario;
-    text-decoration: none;
-}
+    a {
+        color: $color__secundario;
+        text-decoration: none;
+    }
 
-.lista__footer--activo {
-    font-weight: bold;
+    .lista__footer--activo {
+        font-weight: bold;
+    }
 }
 
 .map {

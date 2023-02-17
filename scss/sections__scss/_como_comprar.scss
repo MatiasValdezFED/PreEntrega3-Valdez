@@ -4,3 +4,15 @@
     background-color: darkmagenta;
     font-weight: bold;
 }
+
+@media (max-width: 425px) {
+
+    .comprar__explicación {
+        width: 100%;
+    }
+
+    .yt_video {
+        width: 100%;
+    }
+
+}

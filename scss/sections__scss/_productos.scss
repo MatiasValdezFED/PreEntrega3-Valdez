@@ -1,13 +1,20 @@
 .producto {
     width: 100%;
     text-align: center;
+
+    div {
+        margin-left: 78px;
+        margin-right: 78px;
+        margin: auto;
+    }
+
+    img {
+        width: 250px;
+        height: 500px;
+        object-fit: cover;
+    }
 }
 
-.producto div {
-    margin-left: 78px;
-    margin-right: 78px;
-    margin: auto;
-}
 
 .carrito__2 {
     color: $color__secundario;
@@ -16,20 +23,15 @@
     border-radius: 8px;
 }
 
-.producto img {
-    width: 250px;
-    height: 500px;
-    object-fit: cover;
-}
-
 .productos__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-}
 
-.productos__grid h2 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    h2 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
 }
 
 /* Dispositivo mediano */
