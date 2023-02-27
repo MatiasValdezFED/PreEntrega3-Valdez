@@ -79,6 +79,11 @@
         width: 100%;
     }
 
+    .header__img {
+        display: flex;
+        justify-content: space-around;
+    }
+
     .nav__mobile {
         display: block;
         background-color: $color__principal;
