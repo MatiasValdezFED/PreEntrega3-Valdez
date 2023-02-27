@@ -38,9 +38,30 @@ ul {
   flex-direction: column !important;
 }
 
+.a__header {
+  display: flex;
+  text-decoration: none;
+}
+
 .img__logo {
   width: 120px;
   padding: 1rem;
+}
+
+.icon__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.icon__container i {
+  padding: 0.5rem;
+  margin: 10px;
+}
+.icon__container .fa-solid.fa-envelope {
+  color: #72002e;
+}
+.icon__container .fa-brands {
+  color: #72002e;
 }
 
 .navbar--principal {

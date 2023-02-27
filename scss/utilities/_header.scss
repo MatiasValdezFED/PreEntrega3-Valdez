@@ -3,9 +3,35 @@
     flex-direction: column !important;
 }
 
+.a__header {
+    display: flex;
+    text-decoration: none;
+}
+
 .img__logo {
     width: 120px;
     padding: 1rem;
+}
+
+
+.icon__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    i {
+        padding: 0.5rem;
+        margin: 10px;
+    }
+
+    .fa-solid.fa-envelope {
+        color: $color__principal;
+    }
+
+    .fa-brands {
+        color: $color__principal;
+    }
+
 }
 
 .navbar--principal {
