@@ -1,29 +1,3 @@
-.accordion {
-
-    --bs-accordion-btn-bg: rgb(245, 237, 244);
-    --bs-accordion-active-color: white;
-
-    .accordion-button {
-
-        &:focus {
-            border-color: none;
-            box-shadow: none;
-        }
-
-        &:not(.collapsed) {
-            $accordion-icon-active-color: white;
-            background-color: $color__principal;
-            color: $color__secundario;
-
-            &:focus {
-                border-color: $color__secundario;
-                box-shadow: $color__secundario;
-            }
-        }
-
-    }
-}
-
 .col {
     height: 300px;
     margin: 25px;

@@ -1,8 +1,9 @@
-.row {
-    padding: 25px;
+.btn-primary {
+    --bs-btn-bg: #72002eff;
+    --bs-btn-border-color: white;
+    --bs-btn-hover-bg: black;
 }
 
-.btn-primary {
-    --bs-btn-bg: $color__principal;
-    --bs-btn-border-color: $color__principal;
+.row {
+    padding: 25px;
 }
