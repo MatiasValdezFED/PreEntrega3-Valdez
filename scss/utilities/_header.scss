@@ -8,6 +8,10 @@
     text-decoration: none;
 }
 
+.header__img {
+    background-color: #38273bff;
+}
+
 .img__logo {
     width: 120px;
     padding: 1rem;
@@ -83,6 +87,7 @@
         display: flex;
         justify-content: space-around;
     }
+
 
     .nav__mobile {
         display: block;

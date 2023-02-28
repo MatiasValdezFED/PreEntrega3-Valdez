@@ -43,6 +43,10 @@ ul {
   text-decoration: none;
 }
 
+.header__img {
+  background-color: #38273b;
+}
+
 .img__logo {
   width: 120px;
   padding: 1rem;
