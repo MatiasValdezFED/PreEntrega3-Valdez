@@ -38,13 +38,10 @@ ul {
   flex-direction: column !important;
 }
 
-.a__header {
-  display: flex;
-  text-decoration: none;
-}
-
 .header__img {
+  display: flex;
   background-color: #38273b;
+  justify-content: space-between;
 }
 
 .img__logo {
@@ -56,6 +53,7 @@ ul {
   width: 100%;
   display: flex;
   justify-content: center;
+  text-decoration: none;
 }
 .icon__container i {
   padding: 0.5rem;
@@ -66,6 +64,15 @@ ul {
 }
 .icon__container .fa-brands {
   color: #72002e;
+}
+
+.cart__login {
+  display: flex;
+  color: white;
+  align-items: flex-end;
+}
+.cart__login i {
+  margin: 25px;
 }
 
 .navbar--principal {
@@ -108,7 +115,6 @@ ul {
   }
   .header__img {
     display: flex;
-    justify-content: space-around;
   }
   .nav__mobile {
     display: block;

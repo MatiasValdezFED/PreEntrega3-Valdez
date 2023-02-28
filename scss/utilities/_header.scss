@@ -3,13 +3,15 @@
     flex-direction: column !important;
 }
 
-.a__header {
-    display: flex;
-    text-decoration: none;
-}
+// .a__header {
+//     display: flex;
+//     text-decoration: none;
+// }
 
 .header__img {
+    display: flex;
     background-color: #38273bff;
+    justify-content: space-between;
 }
 
 .img__logo {
@@ -17,11 +19,11 @@
     padding: 1rem;
 }
 
-
 .icon__container {
     width: 100%;
     display: flex;
     justify-content: center;
+    text-decoration: none;
 
     i {
         padding: 0.5rem;
@@ -36,6 +38,16 @@
         color: $color__principal;
     }
 
+}
+
+.cart__login {
+    display: flex;
+    color: $color__secundario;
+    align-items: flex-end;
+
+    i {
+        margin: 25px;
+    }
 }
 
 .navbar--principal {
@@ -85,9 +97,7 @@
 
     .header__img {
         display: flex;
-        justify-content: space-around;
     }
-
 
     .nav__mobile {
         display: block;
