@@ -246,6 +246,22 @@ ul {
      object-fit: cover;
 }
 
+.wp__container i.fa-whatsapp::before {
+  position: fixed;
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  bottom: 30px;
+  right: 30px;
+  background-color: green;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 45px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
 .ofertas__grid {
   width: 100%;
 }
@@ -383,6 +399,18 @@ ul {
   }
   .titulo__cat {
     left: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .wp__container i.fa-whatsapp::before {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50px;
+    font-size: 35px;
   }
 }
 .col {
