@@ -73,14 +73,17 @@ function seleccionarProductos() {
       break;
     case cierreReforzado.id:
       montoTotal += cierreReforzado.precio;
+      carrito.push(cierreReforzado);
       alert(`Su pedido es de ${cierreReforzado.precio}`);
       break;
     case avio.id:
       montoTotal += avio.precio;
+      carrito.push(avio);
       alert(`Su pedido es de ${avio.precio}`);
       break;
     case elastico.id:
       montoTotal += elastico.precio;
+      carrito.push(elastico);
       alert(`Su pedido es de ${elastico.precio}`);
       break;
     default:
@@ -112,6 +115,8 @@ function mostrarCarrito() {
     alert(`${lista} y su monto total es ${montoTotal}`);
   }
 }
+
+function eliminarCarrito ()
 
 function iniciar() {
   alert(
