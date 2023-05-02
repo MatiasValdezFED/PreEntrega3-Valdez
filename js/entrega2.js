@@ -35,7 +35,7 @@ const elastico = new crearProducto(
 );
 
 // Creación del carrito vacío con un array
-const carrito = [];
+let carrito = [];
 
 // Inicializar el monto total
 let montoTotal = 0;
@@ -116,7 +116,85 @@ function mostrarCarrito() {
   }
 }
 
-function eliminarCarrito ()
+function eliminarCarrito() {
+  carrito = [];
+  montoTotal = 0;
+}
+
+function editarCarrito() {
+  let lista = "Su carrito es: \n";
+  if (carrito.length > 0) {
+    for (let index = 0; index < carrito.length; index++) {
+      const nombreProducto = carrito[index].nombreProducto;
+      const id = carrito[index].id;
+      lista += `${id} - ${nombreProducto} \n`;
+    }
+    const eliminarProductos = parseInt(
+      prompt(`${lista} y su monto total es ${montoTotal}
+    escriba el número del producto que desea eliminar:`)
+    );
+    switch (eliminarProductos) {
+      case hiloEncerado.id:
+        montoTotal -= hiloEncerado.precio;
+        let index1 = carrito.indexOf(hiloEncerado);
+        carrito.splice(index1, 1);
+        alert(`se ha eliminado ${hiloEncerado.nombreProducto}`);
+        break;
+      case totora.id:
+        montoTotal -= totora.precio;
+        let index2 = carrito.indexOf(totora);
+        carrito.splice(index2, 1);
+        alert(`se ha eliminado ${totora.nombreProducto}`);
+        break;
+      case cierreReforzado.id:
+        montoTotal -= cierreReforzado.precio;
+        let index3 = carrito.indexOf(cierreReforzado);
+        carrito.splice(index3, 1);
+        alert(`se ha eliminado ${cierreReforzado.nombreProducto}`);
+        break;
+      case avio.id:
+        montoTotal -= avio.precio;
+        let index4 = carrito.indexOf(avio);
+        carrito.splice(index4, 1);
+        alert(`se ha eliminado ${avio.nombreProducto}`);
+        break;
+      case elastico.id:
+        montoTotal -= elastico.precio;
+        let index5 = carrito.indexOf(elastico);
+        carrito.splice(index5, 1);
+        alert(`se ha eliminado ${elastico.nombreProducto}`);
+        break;
+      default:
+        alert("Su opción no es correcta, por favor seleccione nuevamente");
+        return editarCarrito();
+    }
+    mostrarCarrito();
+  } else {
+    alert("Su carrito está vacío");
+  }
+}
+
+function finalizarCarrito() {
+  const elección = parseInt(
+    prompt(
+      "Elija cómo continuar: \n1: Finalizar Carrito \n2: Vaciar Carrito \n3: Editar Carrito"
+    )
+  );
+  switch (elección) {
+    case 1:
+      break;
+    case 2:
+      eliminarCarrito();
+      alert("Su carrito se ha vaciado");
+      break;
+    case 3:
+      editarCarrito();
+      break;
+    default:
+      alert("Su opción no es correcta, por favor seleccione nuevamente");
+      return finalizarCarrito();
+  }
+}
 
 function iniciar() {
   alert(
@@ -125,9 +203,14 @@ function iniciar() {
   ingresarNombre();
   seleccionarProductos();
   mostrarCarrito();
-  alert(
-    "¡Gracias por su compra! lo contactaremos a la brevedad para completar su pago"
-  );
+  finalizarCarrito();
+  if (carrito.length > 0) {
+    alert(
+      "¡Gracias por su compra! lo contactaremos a la brevedad para completar su pago"
+    );
+  } else {
+    alert("¡Gracias por visitarnos, vuelva pronto!");
+  }
 }
 
 iniciar();
