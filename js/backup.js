@@ -1,6 +1,65 @@
-//Carrito de productos
+//Condicionales
 
-// Crear los productos
+// if (condicion){
+// //respuesta
+// }else
+// {
+// //Otra respeusta
+// };
+
+//Operadores Lógicos
+
+// == igualdad
+// > mayor que
+// < menor que
+// != distinto
+// >= mayor o igual
+// <= menor o igual
+// === estrictamente igual
+// !== estructamente diferente
+// && AND
+// || OR
+
+const puntaje = 1000;
+
+if (puntaje > 500) {
+  console.log("Ganaste");
+} else {
+  console.log("Perdiste");
+}
+
+const efectivo = 300;
+const credito = 400;
+const totalPagar = 600;
+const disponible = efectivo + credito;
+
+console.log(disponible);
+
+//Si alguno de los OR se cumple, arroja el primer ELSE
+if (efectivo > totalPagar || credito > totalPagar || disponible > totalPagar) {
+  console.log("Podemos comprar");
+} else {
+  console.log("Saldos insuficientes");
+}
+
+const texto = prompt("Ingrese la palabra 'Coderhouse'");
+
+if (texto === "Coderhouse") {
+  console.log("La respuesta es correcta");
+} else {
+  console.log("La respuesta es incorrecta");
+}
+
+const precio = prompt("Ingrese el precio del producto");
+
+if (precio > 100) {
+  alert("Es caro");
+} else {
+  alert("Es barato");
+}
+
+// Back Up Entrega 2
+
 function crearProducto(id, nombreProducto, precio, descripcion) {
   (this.id = id),
     (this.nombreProducto = nombreProducto),
@@ -214,3 +273,39 @@ function iniciar() {
 }
 
 iniciar();
+
+/* <article class="producto">
+        <h2>Totoras</h2>
+        <img class="wow animate__animated animate__pulse"
+          src="../assets/Productos/Imagen de WhatsApp 2023-01-02 a las 22.41.19jkhjkhj.jpg" alt="Totoras">
+        <div class="carrito__2">AGREGAR AL CARRITO</div>
+        <div>$650 (kg)</div>
+      </article>
+      <article class="producto">
+        <h2>Cierres Reforzados</h2>
+        <img class="wow animate__animated animate__pulse"
+          src="../assets/Productos/Imagen de WhatsApp 2023-01-02 a las 22.41.20gfd.jpg" alt="Cierres">
+        <div class="carrito__2">AGREGAR AL CARRITO</div>
+        <div>$320</div>
+      </article>
+      <article class="producto">
+        <h2>Avíos (6,8 y 10 mm)</h2>
+        <img class="wow animate__animated animate__pulse"
+          src="../assets/Productos/Imagen de WhatsApp 2023-01-02 a las 22.41.21a.jpg" alt="Avíos">
+        <div class="carrito__2">AGREGAR AL CARRITO</div>
+        <div>$20</div>
+      </article>
+      <article class="producto">
+        <h2>Elásticos para boxer</h2>
+        <img class="wow animate__animated animate__pulse"
+          src="../assets/Productos/Imagen de WhatsApp 2023-01-02 a las 22.41.21aa.jpg" alt="Elásticos p/boxer">
+        <div class="carrito__2">AGREGAR AL CARRITO</div>
+        <div>$200 (m)</div>
+      </article>
+      <article class="producto">
+        <h2>Rueda de alfileres largos</h2>
+        <img class="wow animate__animated animate__pulse"
+          src="../assets/Productos/Imagen de WhatsApp 2023-01-02 a las 22.41.22.jpg" alt="Ruedas alfileres">
+        <div class="carrito__2">AGREGAR AL CARRITO</div>
+        <div>$300 (x48u)</div>
+      </article> */
