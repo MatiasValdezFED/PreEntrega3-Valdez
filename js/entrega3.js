@@ -105,7 +105,7 @@ function crearProductos() {
   articulos.forEach((articulo) => {
     const article = document.createElement("article");
     article.classList.add("producto");
-    article.innerHtml = `
+    article.innerHTML = `
     <h2>${articulo.nombreProducto}</h2>
         <img src="${articulo.imagen}" alt="${articulo.nombreProducto}">
         <div>$${articulo.precio}</div>
