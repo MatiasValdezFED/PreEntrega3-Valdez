@@ -110,7 +110,7 @@ function crearProductos() {
     <h2>${articulo.nombreProducto}</h2>
         <img src="${articulo.imagen}" alt="${articulo.nombreProducto}">
         <div>$${articulo.precio}</div>
-        <button class="carrito__2" class="botonAgregar" id=${articulo.id}>AGREGAR AL CARRITO</button>
+        <button class="carrito__2 botonAgregar" id=${articulo.id}>AGREGAR AL CARRITO</button>
     `;
     productosGrid.append(article);
   });
@@ -131,8 +131,10 @@ agregarArticulos();
 const carrito = [];
 
 function agregarAlCarrito(e) {
-  const id = e.currentTarget.id;
-  console.log(id);
+  const idBoton = parseInt(e.currentTarget.id);
+  const articuloAgregado = articulos.find(
+    (articulo) => articulo.id === idBoton
+  );
+  carrito.push(articuloAgregado);
+  console.log(carrito);
 }
-
-agregarAlCarrito();
