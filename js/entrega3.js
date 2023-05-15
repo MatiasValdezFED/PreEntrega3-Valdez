@@ -100,6 +100,7 @@ const articulos = [
 ];
 
 const productosGrid = document.querySelector(".productos__grid");
+const botonAgregar = document.querySelectorAll(".botonAgregar");
 
 function crearProductos() {
   articulos.forEach((articulo) => {
@@ -109,10 +110,29 @@ function crearProductos() {
     <h2>${articulo.nombreProducto}</h2>
         <img src="${articulo.imagen}" alt="${articulo.nombreProducto}">
         <div>$${articulo.precio}</div>
-        <button class="carrito__2">AGREGAR AL CARRITO</button>
+        <button class="carrito__2" class="botonAgregar" id=${articulo.id}>AGREGAR AL CARRITO</button>
     `;
     productosGrid.append(article);
   });
 }
 
 crearProductos();
+
+function agregarArticulos() {
+  const botonAgregar = document.querySelectorAll(".botonAgregar");
+
+  botonAgregar.forEach((boton) => {
+    boton.addEventListener("click", agregarAlCarrito);
+  });
+}
+
+agregarArticulos();
+
+const carrito = [];
+
+function agregarAlCarrito(e) {
+  const id = e.currentTarget.id;
+  console.log(id);
+}
+
+agregarAlCarrito();
