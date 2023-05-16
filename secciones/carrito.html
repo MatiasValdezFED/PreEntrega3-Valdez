@@ -23,7 +23,7 @@
       <a href="../index.html"><img class="img__logo" src="../assets/Imagen de WhatsApp 2023-01-02 a las 21.05.12.jpg"
           alt="Entre Hilos Logo"></a>
       <div class="cart__login">
-       <a href="carrito.html"><i class="fa-2x fa-solid fa-cart-shopping"></i></a>
+       <a href="carrito.html" target="_blank"><i class="fa-2x fa-solid fa-cart-shopping"></i><span class="numero">0</span></a>
         <i class="fa-2x fa-solid fa-right-to-bracket"></i>
       </div>
     </div>
@@ -63,10 +63,7 @@
     <nav class="navbar--principal">
       <ul class="menu">
         <li><a href="../index.html">INICIO</a></li>
-        <li><a href="./nosotros.html">NOSOTROS</a></li>
-        <li><a href="./productos.html" class="menu--activo">PRODUCTOS</a></li>
-        <li><a href="./contacto.html">CONTACTO</a></li>
-        <li><a href="./FAQ.html">FAQ</a></li>
+        <li><a href="./productos.html" class="menu--activo">VOLVER A LA TIENDA</a></li>
       </ul>
     </nav>
   </header>
@@ -75,9 +72,40 @@
     <div class="wp__container"><a href="https://api.whatsapp.com/send/?phone=5493516104002" target="_blank"><i
           class="fa-4x fa-brands fa-whatsapp"></i></a></div>
           
-    <section>
-    
-    </section>
+    <p class="carrito__vacio">El carrito está vacío</p>
+
+    <div class="articulos__carrito">
+
+     <div class="articulo__carrito">
+       <img class="articulo__carrito__imagen" src="../assets/Productos/Totoras.jpg" alt="">
+       <div class="articulo__carrito__titulo">
+        <h3>Totora</h3>
+       </div>
+       <div class="articulo__carrito__cantidad">
+        <h3>1</h3>
+       </div>
+       <div class="articulo__carrito__precioUnitario">
+        <small>Precio Unitario</small>
+        <h3>$800</h3>
+       </div>
+       <div class="articulo__carrito__Subtotal">
+        <small>Subtotal</small>
+        <h3>$800</h3>
+       </div>
+       <button class="articulo__carrito__borrar">
+        <i class="fa-solid fa-trash"></i>
+       </button>
+     </div>
+     <div class="precio__total">
+      <p>Total:</p>
+      <p id="total">$800</p>
+     </div>
+     <div class="carrito__acciones">
+      <button class="carrito__acciones__vaciar">Vaciar Carrito</button>
+      <button class="carrito__acciones__comprar">Finalizar compra</button>
+     </div>
+    </div>
+
   </main>
   <footer class="footer">
     <a href="./index.html">

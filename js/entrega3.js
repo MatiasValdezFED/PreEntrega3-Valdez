@@ -131,10 +131,17 @@ agregarArticulos();
 const carrito = [];
 
 function agregarAlCarrito(e) {
-  const idBoton = parseInt(e.currentTarget.id);
+  const botonId = parseInt(e.currentTarget.id);
   const articuloAgregado = articulos.find(
-    (articulo) => articulo.id === idBoton
+    (articulo) => articulo.id === botonId
   );
-  carrito.push(articuloAgregado);
+  if (carrito.some((articulo) => articulo.id === botonId)) {
+    const index = carrito.findIndex((articulo) => articulo.id === botonId);
+    carrito[index].cantidad++;
+  } else {
+    articuloAgregado.cantidad = 1;
+    carrito.push(articuloAgregado);
+  }
+
   console.log(carrito);
 }
