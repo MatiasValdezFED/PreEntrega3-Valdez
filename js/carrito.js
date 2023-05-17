@@ -78,13 +78,14 @@ function eliminarDelCarrito(e) {
   localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
 }
 
-// botonVaciar.addEventListener("click", vaciarCarrito());
+botonVaciar.addEventListener("click", vaciarCarrito());
 
-// function vaciarCarrito() {
-//   carritoArticulo.length = 0;
-//   localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
-//   cargarArticulosCarrito();
-// }
+function vaciarCarrito() {
+  localStorage.clear("articulos-en-carrito");
+  carritoArticulo = [];
+  localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
+  cargarArticulosCarrito();
+}
 
 function actualizarTotal() {
   totalCalculado = carritoArticulo.reduce(
@@ -96,7 +97,7 @@ function actualizarTotal() {
 
 botonFinalizar.addEventListener("click", vaciarCarrito());
 
-function finalizarCarrito() {
-  carritoArticulo.length = 0;
-  localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
-}
+// function finalizarCarrito() {
+//   carritoArticulo.length = 0;
+//   localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
+// }
