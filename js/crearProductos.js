@@ -131,12 +131,10 @@ function agregarArticulos() {
 agregarArticulos();
 
 let carrito;
-const carritoArticuloLs = JSON.parse(
-  localStorage.getItem("articulos-en-carrito")
-);
+let carritoArticuloLs = localStorage.getItem("articulos-en-carrito");
 
 if (carritoArticuloLs) {
-  carrito = carritoArticuloLs;
+  carrito = JSON.parse(carritoArticuloLs);
 } else {
   carrito = [];
 }
