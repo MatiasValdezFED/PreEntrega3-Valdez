@@ -130,21 +130,14 @@ function agregarArticulos() {
 
 agregarArticulos();
 
-let carrito;
-let carritoArticuloLs = localStorage.getItem("articulos-en-carrito");
-
-if (carritoArticuloLs) {
-  carrito = JSON.parse(carritoArticuloLs);
-} else {
-  carrito = [];
-}
-
 function agregarAlCarrito(e) {
+  let carrito = localStorage.getItem("articulos-en-carrito");
+  carrito = JSON.parse(carrito);
   const botonId = parseInt(e.currentTarget.id);
   const articuloAgregado = articulos.find(
     (articulo) => articulo.id === botonId
   );
-  if (carrito.some((articulo) => articulo.id === botonId)) {
+  if (carrito && carrito.some((articulo) => articulo.id === botonId)) {
     const index = carrito.findIndex((articulo) => articulo.id === botonId);
     carrito[index].cantidad++;
   } else {

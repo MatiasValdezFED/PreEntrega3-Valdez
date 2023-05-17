@@ -13,6 +13,7 @@ let carritoArticulo = localStorage.getItem("articulos-en-carrito");
 carritoArticulo = JSON.parse(carritoArticulo);
 
 function cargarArticulosCarrito() {
+  console.log("carritoArticulo", carritoArticulo);
   if (carritoArticulo && carritoArticulo.length > 0) {
     carritoVacio.classList.add("disabled");
     articulosCarrito.classList.remove("disabled");
@@ -46,25 +47,24 @@ function cargarArticulosCarrito() {
 
       articulosCarrito.append(div);
     });
+
+    const botonEliminar = document.querySelectorAll(
+      ".articulo__carrito__borrar"
+    );
+
+    botonEliminar.forEach((boton) => {
+      boton.addEventListener("click", eliminarDelCarrito);
+    });
   } else {
     carritoVacio.classList.remove("disabled");
     articulosCarrito.classList.add("disabled");
     carritoAcciones.classList.add("disabled");
   }
 
-  eliminarArticulos();
   actualizarTotal();
 }
 
 cargarArticulosCarrito();
-
-function eliminarArticulos() {
-  const botonEliminar = document.querySelectorAll(".articulo__carrito__borrar");
-
-  botonEliminar.forEach((boton) => {
-    boton.addEventListener("click", eliminarDelCarrito);
-  });
-}
 
 function eliminarDelCarrito(e) {
   let botonId = parseInt(e.currentTarget.id);
@@ -78,10 +78,9 @@ function eliminarDelCarrito(e) {
   localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
 }
 
-botonVaciar.addEventListener("click", vaciarCarrito());
+botonVaciar.addEventListener("click", vaciarCarrito);
 
 function vaciarCarrito() {
-  localStorage.clear("articulos-en-carrito");
   carritoArticulo = [];
   localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
   cargarArticulosCarrito();
@@ -95,7 +94,7 @@ function actualizarTotal() {
   total.innerText = `${totalCalculado}`;
 }
 
-botonFinalizar.addEventListener("click", vaciarCarrito());
+// botonFinalizar.addEventListener("click", vaciarCarrito());
 
 // function finalizarCarrito() {
 //   carritoArticulo.length = 0;
