@@ -103,6 +103,8 @@ const productosGrid = document.querySelector(".productos__grid");
 const botonAgregar = document.querySelectorAll(".botonAgregar");
 
 function crearProductos() {
+  productosGrid.innerHTML = "";
+
   articulos.forEach((articulo) => {
     const article = document.createElement("article");
     article.classList.add("producto");
@@ -128,7 +130,16 @@ function agregarArticulos() {
 
 agregarArticulos();
 
-const carrito = [];
+let carrito;
+const carritoArticuloLs = JSON.parse(
+  localStorage.getItem("articulos-en-carrito")
+);
+
+if (carritoArticuloLs) {
+  carrito = carritoArticuloLs;
+} else {
+  carrito = [];
+}
 
 function agregarAlCarrito(e) {
   const botonId = parseInt(e.currentTarget.id);
@@ -142,6 +153,7 @@ function agregarAlCarrito(e) {
     articuloAgregado.cantidad = 1;
     carrito.push(articuloAgregado);
   }
-
   console.log(carrito);
+
+  localStorage.setItem("articulos-en-carrito", JSON.stringify(carrito));
 }

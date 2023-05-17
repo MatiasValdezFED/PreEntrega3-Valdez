@@ -470,6 +470,10 @@ a {
   text-decoration: none;
 }
 
+.disabled {
+  display: none !important;
+}
+
 .carrito__vacio {
   margin: 25px;
   display: flex;
