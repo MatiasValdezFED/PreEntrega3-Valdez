@@ -513,12 +513,17 @@ a {
   padding-right: 100px;
 }
 
-.precio__total {
+.carrito__total {
   display: flex;
-  justify-content: flex-end;
-  -webkit-padding-end: 400px;
-          padding-inline-end: 400px;
   color: #72002e;
+  padding-left: 1075px;
+  padding-top: 25px;
+  border-radius: 1rem;
+}
+
+.precio__total {
+  font-weight: bold;
+  display: flex;
 }
 
 .carrito__acciones {
@@ -530,10 +535,14 @@ a {
   border-radius: 1rem;
   color: white;
   background-color: #72002e;
+  padding: 20px;
+  margin: 4px;
 }
 
 .carrito__acciones__comprar {
   border-radius: 1rem;
   color: white;
   background-color: #72002e;
+  padding: 20px;
+  margin: 4px;
 }/*# sourceMappingURL=main.css.map */

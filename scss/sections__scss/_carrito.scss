@@ -45,11 +45,17 @@ a{
     padding-right: 100px;
 }
 
-.precio__total{
+.carrito__total{
     display: flex;
-    justify-content: flex-end;
-    padding-inline-end: 400px;
     color: $color__principal;
+    padding-left: 1075px;
+    padding-top: 25px;
+    border-radius: 1rem;
+}
+
+.precio__total{
+    font-weight: bold;
+    display: flex;
 }
 
 .carrito__acciones{
@@ -61,12 +67,16 @@ a{
     border-radius: 1rem;
     color: $color__secundario;
     background-color: $color__principal;
+    padding: 20px;
+    margin: 4px;
 }
 
 .carrito__acciones__comprar{
     border-radius: 1rem;
     color: $color__secundario;
     background-color: $color__principal;
+    padding: 20px;
+    margin: 4px;
 }
 
 
