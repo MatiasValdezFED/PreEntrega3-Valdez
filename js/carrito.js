@@ -2,8 +2,8 @@
 
 const carritoVacio = document.querySelector(".carrito__vacio");
 const articulosCarrito = document.querySelector(".articulos__carrito");
+const contadorCarrito = document.getElementById("cantidadCarrito");
 const carritoAcciones = document.querySelector(".carrito__acciones");
-//const articulosCarrito = document.querySelector(".articulos__carrito")
 const botonEliminar = document.querySelectorAll(".articulo__carrito__borrar");
 const botonVaciar = document.querySelector(".carrito__acciones__vaciar");
 const total = document.querySelector("#total");
@@ -94,9 +94,10 @@ function actualizarTotal() {
   total.innerText = `${totalCalculado}`;
 }
 
-// botonFinalizar.addEventListener("click", vaciarCarrito());
+botonFinalizar.addEventListener("click", finalizarCarrito);
 
-// function finalizarCarrito() {
-//   carritoArticulo.length = 0;
-//   localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
-// }
+function finalizarCarrito() {
+  carritoArticulo = [];
+  localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
+  cargarArticulosCarrito();
+}

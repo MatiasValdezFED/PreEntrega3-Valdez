@@ -101,6 +101,7 @@ const articulos = [
 
 const productosGrid = document.querySelector(".productos__grid");
 const botonAgregar = document.querySelectorAll(".botonAgregar");
+const contadorCarrito = document.getElementById("cantidadCarrito");
 
 function crearProductos() {
   productosGrid.innerHTML = "";
@@ -147,4 +148,13 @@ function agregarAlCarrito(e) {
   console.log(carrito);
 
   localStorage.setItem("articulos-en-carrito", JSON.stringify(carrito));
+  actualizarContador();
+
+  function actualizarContador() {
+    let contador = carrito.reduce(
+      (acc, articulo) => acc + articulo.cantidad,
+      0
+    );
+    contadorCarrito.innerText = contador;
+  }
 }

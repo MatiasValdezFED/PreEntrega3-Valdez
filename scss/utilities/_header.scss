@@ -40,6 +40,22 @@
     color: $color__secundario;
     align-items: flex-end;
 
+    .fa-cart-shopping:before{
+        color: $color__secundario;
+    }
+
+    .cantidad__carrito{
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        font-size: 14px;
+        padding: 3px;
+        top: 38px;
+        right: 13px;
+        position: absolute;
+        transform: translate(-81px, 37px);
+    }
+
     i {
         margin: 25px;
     }

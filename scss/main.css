@@ -71,6 +71,20 @@ ul {
   color: white;
   align-items: flex-end;
 }
+.cart__login .fa-cart-shopping:before {
+  color: white;
+}
+.cart__login .cantidad__carrito {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  padding: 3px;
+  top: 38px;
+  right: 13px;
+  position: absolute;
+  transform: translate(-81px, 37px);
+}
 .cart__login i {
   margin: 25px;
 }
