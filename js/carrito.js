@@ -2,7 +2,6 @@
 
 const carritoVacio = document.querySelector(".carrito__vacio");
 const articulosCarrito = document.querySelector(".articulos__carrito");
-const contadorCarrito = document.getElementById("cantidadCarrito");
 const carritoAcciones = document.querySelector(".carrito__acciones");
 const botonEliminar = document.querySelectorAll(".articulo__carrito__borrar");
 const botonVaciar = document.querySelector(".carrito__acciones__vaciar");
