@@ -42,6 +42,13 @@
 
     .fa-cart-shopping:before{
         color: $color__secundario;
+        margin: 25px;
+    }
+
+    button{
+        padding-bottom: 22px;
+        background-color: #38273bff;
+        border: none;
     }
 
     .cantidad__carrito{

@@ -10,10 +10,7 @@ a{
     margin: 25px;
     display: flex;
     justify-content: center;
-}
-
-.carrito__vacio{
-    color: $color__principal;
+    color: $color__secundario;
 }
 
 .articulos__carrito{
@@ -22,50 +19,56 @@ a{
     gap: 1rem;
 }
 
-// .modal__container {
-//     width: 80%;
-//     margin: 0 10%;
-//     max-height: 88vh;
-//     color: #fff;
-//     background-color: #121212;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     /*for the top*/
-//     position: fixed;
-//     overflow: auto;
-//     z-index: 9;
-//     top: 12vh;
-//     scrollbar-color: none;
-//   }
+.modal__container {
+    width: 50%;
+    margin: 100px;
+    margin-left: 500px;
+    // max-height: 88vh;
+    color: #fff;
+    background-color: #38273bff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*for the top*/
+    position: fixed;
+     overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+
+  }
 
 .articulo__carrito{
     display: flex;
-    justify-content: space-between;
     padding: 0.5rem;
+    width: 625px;
     background-color: $color__principal;
     color: $color__secundario;
     border-radius: 1rem;
     align-items: center;
-    padding-right: 1,5rem;
+    justify-content: space-between;
 }
 
 .articulo__carrito__imagen{
-    width: 5rem;
+    width: 75px;
+    height: 75px;
     border-radius: 1rem;
+}
+
+.articulo__carrito__titulo{
+    width: 200px;
+    height: 100%;
 }
 
 .articulo__carrito__borrar{
     border: 0;
     background-color: transparent;
     color: $color__secundario;
-    padding-right: 100px;
 }
 
 .carrito__total{
     display: flex;
-    color: $color__principal;
-    padding-left: 1075px;
+    color: $color__secundario;
     padding-top: 25px;
     border-radius: 1rem;
 }

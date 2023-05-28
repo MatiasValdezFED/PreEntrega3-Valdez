@@ -65,6 +65,15 @@ function cargarArticulosCarrito() {
 
 cargarArticulosCarrito();
 
+const botonCarritoLogo = document.querySelector("#carrito__logo");
+const modalCarrito = document.querySelector("#modal-container");
+
+function abrirCarrito() {
+  modalCarrito.classList.remove("disabled");
+}
+
+botonCarritoLogo.addEventListener("click", abrirCarrito);
+
 function eliminarDelCarrito(e) {
   let botonId = parseInt(e.currentTarget.id);
   const index = carritoArticulo.findIndex(
