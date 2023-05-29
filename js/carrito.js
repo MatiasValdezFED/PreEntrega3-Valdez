@@ -66,6 +66,21 @@ function cargarArticulosCarrito() {
     carritoAcciones.classList.add("disabled");
   }
 
+  function deleteAlert() {
+    botonEliminar.forEach((btn) => {
+      btn.addEventListener("click", async function () {
+        Toastify({
+          text: "Artículo Borrado",
+          className: "info",
+          style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+          },
+        }).showToast();
+      });
+    });
+  }
+
+  deleteAlert();
   actualizarTotal();
   actualizarContador(carritoArticulo);
 }
@@ -128,21 +143,3 @@ function finalizarCarrito() {
   cargarArticulosCarrito();
   actualizarContador(carritoArticulo);
 }
-
-function deleteAlert() {
-  const borrarBtn = document.querySelectorAll(".fa-trash");
-
-  borrarBtn.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      Toastify({
-        text: "Artículo Borrado",
-        className: "info",
-        style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
-        },
-      }).showToast();
-    });
-  });
-}
-
-deleteAlert();
