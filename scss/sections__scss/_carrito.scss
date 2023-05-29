@@ -21,9 +21,10 @@ a{
 
 .modal__container {
     width: 50%;
+    padding: 2rem;
     margin: 100px;
     margin-left: 500px;
-    // max-height: 88vh;
+    border-radius: 4rem;
     color: #fff;
     background-color: #38273bff;
     display: flex;
@@ -37,6 +38,18 @@ a{
     scrollbar-color: none;
 
   }
+
+.conteiner__closeButton{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.close__button{
+    display: flex;
+    border-radius: 2rem;
+    padding: 0.25rem;
+}
 
 .articulo__carrito{
     display: flex;
