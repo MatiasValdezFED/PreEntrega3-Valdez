@@ -8,11 +8,17 @@ const botonVaciar = document.querySelector(".carrito__acciones__vaciar");
 const total = document.querySelector("#total");
 const botonFinalizar = document.querySelector(".carrito__acciones__comprar");
 
-let carritoArticulo = localStorage.getItem("articulos-en-carrito");
-carritoArticulo = JSON.parse(carritoArticulo);
+let carritoArticulo;
+
+function obtenerLocalStorage() {
+  carritoStorage = localStorage.getItem("articulos-en-carrito") || [];
+  return JSON.parse(carritoStorage);
+}
 
 function cargarArticulosCarrito() {
+  carritoArticulo = obtenerLocalStorage();
   console.log("carritoArticulo", carritoArticulo);
+
   if (carritoArticulo && carritoArticulo.length > 0) {
     carritoVacio.classList.add("disabled");
     articulosCarrito.classList.remove("disabled");
@@ -41,7 +47,7 @@ function cargarArticulosCarrito() {
      <h3>${articulo.precio * articulo.cantidad}</h3>
     </div>
     <button class="articulo__carrito__borrar" id="${articulo.id}">
-     <i class="fa-solid fa-trash" "></i>
+     <i class="fa-solid fa-trash"></i>
     </button>`;
 
       articulosCarrito.append(div);
@@ -61,6 +67,7 @@ function cargarArticulosCarrito() {
   }
 
   actualizarTotal();
+  actualizarContador(carritoArticulo);
 }
 
 cargarArticulosCarrito();
@@ -71,6 +78,7 @@ const botonCerrarCarrito = document.querySelector(".close__button");
 
 function abrirCarrito() {
   modalCarrito.classList.remove("disabled");
+  cargarArticulosCarrito();
 }
 
 botonCarritoLogo.addEventListener("click", abrirCarrito);
@@ -82,15 +90,16 @@ function cerrarCarrito() {
 botonCerrarCarrito.addEventListener("click", cerrarCarrito);
 
 function eliminarDelCarrito(e) {
+  carritoArticulo = obtenerLocalStorage();
   let botonId = parseInt(e.currentTarget.id);
   const index = carritoArticulo.findIndex(
     (articulo) => articulo.id === botonId
   );
   carritoArticulo.splice(index, 1);
 
-  cargarArticulosCarrito();
-
   localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
+  actualizarContador(carritoArticulo);
+  cargarArticulosCarrito();
 }
 
 botonVaciar.addEventListener("click", vaciarCarrito);
@@ -98,10 +107,12 @@ botonVaciar.addEventListener("click", vaciarCarrito);
 function vaciarCarrito() {
   carritoArticulo = [];
   localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
+  actualizarContador(carritoArticulo);
   cargarArticulosCarrito();
 }
 
 function actualizarTotal() {
+  carritoArticulo = obtenerLocalStorage();
   totalCalculado = carritoArticulo.reduce(
     (acc, articulo) => acc + articulo.precio * articulo.cantidad,
     0
@@ -115,4 +126,23 @@ function finalizarCarrito() {
   carritoArticulo = [];
   localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
   cargarArticulosCarrito();
+  actualizarContador(carritoArticulo);
 }
+
+function deleteAlert() {
+  const borrarBtn = document.querySelectorAll(".fa-trash");
+
+  borrarBtn.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      Toastify({
+        text: "Artículo Borrado",
+        className: "info",
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+      }).showToast();
+    });
+  });
+}
+
+deleteAlert();

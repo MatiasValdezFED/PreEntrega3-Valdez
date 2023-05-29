@@ -131,9 +131,11 @@ function agregarArticulos() {
 
 agregarArticulos();
 
+let carrito;
+
 function agregarAlCarrito(e) {
-  let carrito = localStorage.getItem("articulos-en-carrito") || [];
-  if(carrito.length > 0) {carrito = JSON.parse(carrito);}
+  carrito = obtenerLocalStorage();
+
   const botonId = parseInt(e.currentTarget.id);
   const articuloAgregado = articulos.find(
     (articulo) => articulo.id === botonId
@@ -148,13 +150,28 @@ function agregarAlCarrito(e) {
   console.log(carrito);
 
   localStorage.setItem("articulos-en-carrito", JSON.stringify(carrito));
-  actualizarContador();
-
-  function actualizarContador() {
-    let contador = carrito.reduce(
-      (acc, articulo) => acc + articulo.cantidad,
-      0
-    );
-    contadorCarrito.innerText = contador;
-  }
+  actualizarContador(carrito);
 }
+
+function actualizarContador(carrito) {
+  let contador = carrito.reduce((acc, articulo) => acc + articulo.cantidad, 0);
+  contadorCarrito.innerText = contador;
+}
+
+function addAlert() {
+  const agregarBtn = document.querySelectorAll(".carrito__2");
+
+  agregarBtn.forEach((boton) => {
+    boton.addEventListener("click", function () {
+      Toastify({
+        text: "Artículo Añadido",
+        className: "info",
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+      }).showToast();
+    });
+  });
+}
+
+addAlert();
