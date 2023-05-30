@@ -111,19 +111,13 @@ function eliminarDelCarrito(e) {
   actualizarContador(carritoArticulo);
   cargarArticulosCarrito();
 
-  const botonEliminar = document.querySelectorAll(".articulo__carrito__borrar");
-
-  botonEliminar.forEach((boton) => {
-    boton.addEventListener("click", function () {
-      Toastify({
-        text: "Artículo Borrado",
-        className: "info",
-        style: {
-          background: "linear-gradient(to right, black, black)",
-        },
-      }).showToast();
-    });
-  });
+  Toastify({
+    text: "Artículo Borrado",
+    className: "info",
+    style: {
+      background: "linear-gradient(to right, black, black)",
+    },
+  }).showToast();
 }
 
 //Vaciar Carrito
@@ -168,3 +162,29 @@ function finalizarCarrito() {
   cargarArticulosCarrito();
   actualizarContador(carritoArticulo);
 }
+
+botonFinalizar.addEventListener("click", function () {
+  const { value: formValues } = Swal.fire({
+    title:
+      "¡Para completar tu compra, dejanos un número de teléfono y tu nombre! te contactaremos a la brevedad",
+    html:
+      '<input id="swal-input1" class="swal2-input">' +
+      '<input id="swal-input2" class="swal2-input">',
+    focusConfirm: false,
+    preConfirm: () => {
+      return [
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Carrito enviado ¡gracias por tu compra!",
+          showConfirmButton: false,
+          timer: 1500,
+        }),
+      ];
+    },
+  });
+
+  if (formValues) {
+    Swal.fire(JSON.stringify(formValues));
+  }
+});
