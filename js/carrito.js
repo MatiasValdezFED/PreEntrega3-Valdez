@@ -1,4 +1,4 @@
-//Articulos en carrito
+//------------Articulos en carrito-------------
 
 const carritoVacio = document.querySelector(".carrito__vacio");
 const articulosCarrito = document.querySelector(".articulos__carrito");
@@ -8,12 +8,16 @@ const botonVaciar = document.querySelector(".carrito__acciones__vaciar");
 const total = document.querySelector("#total");
 const botonFinalizar = document.querySelector(".carrito__acciones__comprar");
 
+//Carrito
+
 let carritoArticulo;
 
 function obtenerLocalStorage() {
   carritoStorage = localStorage.getItem("articulos-en-carrito") || [];
   return JSON.parse(carritoStorage);
 }
+
+//Añadir al carrito
 
 function cargarArticulosCarrito() {
   carritoArticulo = obtenerLocalStorage();
@@ -47,7 +51,7 @@ function cargarArticulosCarrito() {
      <h3>${articulo.precio * articulo.cantidad}</h3>
     </div>
     <button class="articulo__carrito__borrar" id="${articulo.id}">
-     <i class="fa-solid fa-trash"></i>
+     <i class="fa-solid fa-trash" id="btnBorrar"></i>
     </button>`;
 
       articulosCarrito.append(div);
@@ -66,30 +70,19 @@ function cargarArticulosCarrito() {
     carritoAcciones.classList.add("disabled");
   }
 
-  function deleteAlert() {
-    botonEliminar.forEach((btn) => {
-      btn.addEventListener("click", async function () {
-        Toastify({
-          text: "Artículo Borrado",
-          className: "info",
-          style: {
-            background: "linear-gradient(to right, #00b09b, #96c93d)",
-          },
-        }).showToast();
-      });
-    });
-  }
-
-  deleteAlert();
   actualizarTotal();
   actualizarContador(carritoArticulo);
 }
 
 cargarArticulosCarrito();
 
+//-----Manipulación del carrito--------
+
 const botonCarritoLogo = document.querySelector("#carrito__logo");
 const modalCarrito = document.querySelector("#modal-container");
 const botonCerrarCarrito = document.querySelector(".close__button");
+
+//Abrir y cerrar carrito
 
 function abrirCarrito() {
   modalCarrito.classList.remove("disabled");
@@ -104,6 +97,8 @@ function cerrarCarrito() {
 
 botonCerrarCarrito.addEventListener("click", cerrarCarrito);
 
+// Eliminar del carrito
+
 function eliminarDelCarrito(e) {
   carritoArticulo = obtenerLocalStorage();
   let botonId = parseInt(e.currentTarget.id);
@@ -115,7 +110,23 @@ function eliminarDelCarrito(e) {
   localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
   actualizarContador(carritoArticulo);
   cargarArticulosCarrito();
+
+  const botonEliminar = document.querySelectorAll(".articulo__carrito__borrar");
+
+  botonEliminar.forEach((boton) => {
+    boton.addEventListener("click", function () {
+      Toastify({
+        text: "Artículo Borrado",
+        className: "info",
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+      }).showToast();
+    });
+  });
 }
+
+//Vaciar Carrito
 
 botonVaciar.addEventListener("click", vaciarCarrito);
 
@@ -126,6 +137,18 @@ function vaciarCarrito() {
   cargarArticulosCarrito();
 }
 
+botonVaciar.addEventListener("click", function () {
+  Toastify({
+    text: "Carrito Vaciado",
+    className: "info",
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+  }).showToast();
+});
+
+//Total
+
 function actualizarTotal() {
   carritoArticulo = obtenerLocalStorage();
   totalCalculado = carritoArticulo.reduce(
@@ -134,6 +157,8 @@ function actualizarTotal() {
   );
   total.innerText = `${totalCalculado}`;
 }
+
+// Finalizar Carrito
 
 botonFinalizar.addEventListener("click", finalizarCarrito);
 
