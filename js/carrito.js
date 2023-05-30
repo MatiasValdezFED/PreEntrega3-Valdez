@@ -119,7 +119,7 @@ function eliminarDelCarrito(e) {
         text: "Artículo Borrado",
         className: "info",
         style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
+          background: "linear-gradient(to right, black, black)",
         },
       }).showToast();
     });
@@ -142,7 +142,7 @@ botonVaciar.addEventListener("click", function () {
     text: "Carrito Vaciado",
     className: "info",
     style: {
-      background: "linear-gradient(to right, #00b09b, #96c93d)",
+      background: "linear-gradient(to right, red, red)",
     },
   }).showToast();
 });
