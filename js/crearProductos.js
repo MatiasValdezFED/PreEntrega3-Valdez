@@ -166,6 +166,7 @@ function addAlert() {
       Toastify({
         text: "Artículo Añadido",
         className: "info",
+        position: "left top",
         style: {
           background: "linear-gradient(to right, #72002eff, #70566dff)",
         },
