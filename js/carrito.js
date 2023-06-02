@@ -114,6 +114,7 @@ function eliminarDelCarrito(e) {
   Toastify({
     text: "Artículo Borrado",
     className: "info",
+    position: "left top",
     style: {
       background: "linear-gradient(to right, black, black)",
     },
