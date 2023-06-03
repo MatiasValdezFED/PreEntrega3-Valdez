@@ -76,10 +76,10 @@
         <h1>Contacto</h1>
         <div class="wp__container"><a href="https://api.whatsapp.com/send/?phone=5493516104002" target="_blank"><i
                     class="fa-4x fa-brands fa-whatsapp"></i></a></div>
-        <form class="row g-3 needs-validation" novalidate>
+        <form class="row g-3 needs-validation" id="formulario" novalidate>
             <div class="col-md-4">
                 <label for="validationCustom01" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="validationCustom01" required>
+                <input type="text" class="form-control inputObligatorio validationName" id="validationName" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -94,7 +94,7 @@
             <div class="col-md-4">
                 <label for="validationCustomUsername" class="form-label">Teléfono</label>
                 <div class="input-group has-validation">
-                    <input type="text" class="form-control" id="validationCustomUsername"
+                    <input type="number" class="form-control inputObligatorio validationPhone" id="validationPhone"
                         aria-describedby="inputGroupPrepend" required>
                     <div class="invalid-feedback">
                         Por favor inserte un teléfono
@@ -638,7 +638,7 @@
                 </div>
             </div>
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                <textarea class="form-control inputObligatorio validationMsg" placeholder="Leave a comment here" id="validationMsg"
                     style="height: 100px"></textarea>
                 <label for="floatingTextarea2">Dejanos tu mensaje!</label>
             </div>
@@ -654,7 +654,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+                <button class="btn btn-primary btnEnviar" id="validacionEnviar" type="submit">Enviar mensaje</button>
             </div>
         </form>
         <section id="modal-container" class="modal__container disabled">
@@ -700,6 +700,7 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </footer>
 
+    <script src="../js/form.js"></script>
     <script src="../js/crearProductos.js"></script>
     <script src="../js/carrito.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
