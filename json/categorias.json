@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "nombre": "Lanas",
+      "Destacada": 1,
+      "imagen": "../assets/Categorías_main/Lanas.avif"
+    },
+    {
+      "id": 2,
+      "nombre": "Hilos",
+      "Destacada": 1,
+      "imagen": "../assets/Categorías_main/Hilos.avif"
+    },
+    {
+      "id": 3,
+      "nombre": "Elásticos",
+      "Destacada": 1,
+      "imagen": "../assets/Categorías_main/Elásticos.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Cintas",
+      "Destacada": 1,
+      "imagen": "../assets/Categorías_main/Cintas.avif"
+    },
+    {
+      "id": 5,
+      "nombre": "Cierres",
+      "Destacada": 1,
+      "imagen": "../assets/Categorías_main/Cierres.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Botones",
+      "Destacada": 1,
+      "imagen": "../assets/Categorías_main/Botones.avif"
+    },
+    {
+      "id": 7,
+      "nombre": "Lanas",
+      "Destacada": 2,
+      "imagen": "../assets/Categorías_main/Lanas.avif"
+    },
+    {
+      "id": 7,
+      "nombre": "Lanas",
+      "Destacada": 2,
+      "imagen": "../assets/Categorías_main/Lanas.avif"
+    },
+    {
+      "id": 9,
+      "nombre": "Lanas",
+      "Destacada": 2,
+      "imagen": "../assets/Categorías_main/Lanas.avif"
+    },
+    {
+      "id": 10,
+      "nombre": "Lanas",
+      "Destacada": 2,
+      "imagen": "../assets/Categorías_main/Lanas.avif"
+    },
+    {
+      "id": 11,
+      "nombre": "Lanas",
+      "Destacada": 2,
+      "imagen": "../assets/Categorías_main/Lanas.avif"
+    },
+    {
+      "id": 12,
+      "nombre": "Lanas",
+      "Destacada": 2,
+      "imagen": "../assets/Categorías_main/Lanas.avif"
+    }
+  ]
