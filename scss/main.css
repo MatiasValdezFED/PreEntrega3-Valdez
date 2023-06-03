@@ -469,6 +469,10 @@ ul {
   padding: 25px;
 }
 
+.campoObligatorio {
+  color: red;
+}
+
 .accordion {
   --bs-accordion-btn-bg: rgb(245, 237, 244);
   --bs-accordion-active-color: white;

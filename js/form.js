@@ -4,7 +4,7 @@ inputObligatorio.forEach((element) => {
   element.addEventListener("input", (e) => {
     if (e.target.value === "") {
       Toastify({
-        text: "¡Esta campo no puede estar vacío!",
+        text: "¡Este campo no puede estar vacío!",
         className: "info",
         position: "center bottom",
         style: {
@@ -18,13 +18,12 @@ inputObligatorio.forEach((element) => {
 const formulario = document.querySelector("#formulario");
 const nombre = document.querySelector("#validationName");
 const telefono = document.querySelector("#validationPhone");
-const mensaje = document.querySelector("validationMsg");
 
 formulario.addEventListener("submit", validarFormulario);
 
 function validarFormulario(e) {
-  e.preventDeFault();
-  if (nombre.value == "" || telefono.value == "" || mensaje.value == "") {
+  e.preventDefault();
+  if (nombre.value === "" || telefono.value === "") {
     Toastify({
       text: "Completar campos obligatorios",
       className: "info",
