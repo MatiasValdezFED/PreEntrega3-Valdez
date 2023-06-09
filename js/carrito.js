@@ -14,10 +14,12 @@ let carritoArticulo;
 
 function obtenerLocalStorage() {
   carritoStorage = localStorage.getItem("articulos-en-carrito");
-  if(carritoStorage){
-    return JSON.parse(carritoStorage);
-
-  } else return []
+  if(!carritoStorage){
+    let nuevoCarrito = localStorage.setItem("articulos-en-carrito")
+    return JSON.parse(nuevoCarrito);
+  } else { 
+    return  JSON.parse(carritoStorage);
+  }
 }
 
 //Añadir al carrito
