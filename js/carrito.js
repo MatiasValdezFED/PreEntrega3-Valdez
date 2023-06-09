@@ -15,8 +15,8 @@ let carritoArticulo;
 function obtenerLocalStorage() {
   carritoStorage = localStorage.getItem("articulos-en-carrito");
   if(!carritoStorage){
-    let nuevoCarrito = localStorage.setItem("articulos-en-carrito", [])
-    return JSON.parse(nuevoCarrito);
+    localStorage.setItem("articulos-en-carrito", [])
+    return [];
   } else { 
     return  JSON.parse(carritoStorage);
   }
