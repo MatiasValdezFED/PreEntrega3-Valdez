@@ -13,8 +13,11 @@ const botonFinalizar = document.querySelector(".carrito__acciones__comprar");
 let carritoArticulo;
 
 function obtenerLocalStorage() {
-  carritoStorage = localStorage.getItem("articulos-en-carrito") || [];
-  return JSON.parse(carritoStorage);
+  carritoStorage = localStorage.getItem("articulos-en-carrito");
+  if(carritoStorage){
+    return JSON.parse(carritoStorage);
+
+  } else return []
 }
 
 //Añadir al carrito
