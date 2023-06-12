@@ -14,11 +14,11 @@ let carritoArticulo;
 
 function obtenerLocalStorage() {
   carritoStorage = localStorage.getItem("articulos-en-carrito");
-  if(!carritoStorage){
-    localStorage.setItem("articulos-en-carrito", [])
+  if (!carritoStorage) {
+    localStorage.setItem("articulos-en-carrito", []);
     return [];
-  } else { 
-    return  JSON.parse(carritoStorage);
+  } else {
+    return JSON.parse(carritoStorage);
   }
 }
 
@@ -160,22 +160,14 @@ function actualizarTotal() {
 
 // Finalizar Carrito
 
-botonFinalizar.addEventListener("click", finalizarCarrito);
-
-function finalizarCarrito() {
-  carritoArticulo = [];
-  localStorage.setItem("articulos-en-carrito", JSON.stringify(carritoArticulo));
-  cargarArticulosCarrito();
-  actualizarContador(carritoArticulo);
-}
+// botonFinalizar.addEventListener("click", finalizarCarrito);
 
 botonFinalizar.addEventListener("click", function () {
   const { value: formValues } = Swal.fire({
-    title:
-      "¡Para completar tu compra, dejanos un número de teléfono y tu nombre! te contactaremos a la brevedad",
+    title: `El total es ${totalCalculado}, para completar tu compra dejanos un número de teléfono y tu nombre ¡te contactaremos a la brevedad!`,
     html:
-      '<input id="swal-input1" class="swal2-input">' +
-      '<input id="swal-input2" class="swal2-input">',
+      '<label for="floatingTextarea2">Teléfono</label><input id="swal-input1" class="swal2-input">' +
+      '<label for="floatingTextarea2">Nombre</label><input id="swal-input2" class="swal2-input">',
     focusConfirm: false,
     preConfirm: () => {
       return [
@@ -189,8 +181,20 @@ botonFinalizar.addEventListener("click", function () {
       ];
     },
   });
+  const botonOk = document.querySelector(".swal2-confirm");
+  botonOk.addEventListener("click", finalizarCarrito);
 
+  function finalizarCarrito() {
+    carritoArticulo = [];
+    localStorage.setItem(
+      "articulos-en-carrito",
+      JSON.stringify(carritoArticulo)
+    );
+    cargarArticulosCarrito();
+    actualizarContador(carritoArticulo);
+  }
   if (formValues) {
     Swal.fire(JSON.stringify(formValues));
   }
+  cerrarCarrito();
 });

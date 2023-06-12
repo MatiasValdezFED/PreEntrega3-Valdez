@@ -36,7 +36,7 @@ function validarFormulario(e) {
     Swal.fire({
       position: "center",
       icon: "success",
-      title: "Mensaje enviado ¡Te contactaremos a la brevedad!",
+      title: `Gracias ${nombre.value} ¡Te contactaremos a la brevedad!`,
       showConfirmButton: false,
       timer: 1500,
     });
