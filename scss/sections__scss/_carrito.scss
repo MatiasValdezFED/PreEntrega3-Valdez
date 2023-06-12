@@ -113,4 +113,23 @@ a{
 }
 
 
+ @media (max-width: 1024px) {
+
+     .modal__container {
+         width: 70%;
+         margin-left: 200px;
+       }
+
+ }
+
+@media (max-width: 768px) {
+
+    .modal__container {
+        width: 90%;
+        margin-left: 40px;
+      }
+
+}
+
+
 
