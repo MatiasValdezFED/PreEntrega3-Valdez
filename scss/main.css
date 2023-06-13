@@ -215,6 +215,18 @@ ul {
   }
 }
 /*Sections_scss*/
+.ctn-barSearch {
+  width: 100%;
+  padding: 20px;
+}
+.ctn-barSearch input {
+  display: block;
+  width: 1200px;
+  margin: auto;
+  padding: 10px;
+  font-size: 18px;
+}
+
 .producto {
   width: 100%;
   text-align: center;
@@ -610,6 +622,16 @@ a {
   background-color: #72002e;
   padding: 20px;
   margin: 4px;
+}
+
+.pageCover {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  z-index: 7;
+  display: none;
 }
 
 @media (max-width: 1024px) {

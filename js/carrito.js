@@ -86,10 +86,12 @@ cargarArticulosCarrito();
 const botonCarritoLogo = document.querySelector("#carrito__logo");
 const modalCarrito = document.querySelector("#modal-container");
 const botonCerrarCarrito = document.querySelector(".close__button");
+const pageCover = document.querySelector(".pageCover");
 
 //Abrir y cerrar carrito
 
 function abrirCarrito() {
+  pageCover.style.display = "block";
   modalCarrito.classList.remove("disabled");
   cargarArticulosCarrito();
 }
@@ -97,6 +99,7 @@ function abrirCarrito() {
 botonCarritoLogo.addEventListener("click", abrirCarrito);
 
 function cerrarCarrito() {
+  pageCover.style.display = "none";
   modalCarrito.classList.add("disabled");
 }
 
@@ -166,8 +169,8 @@ botonFinalizar.addEventListener("click", function () {
   const { value: formValues } = Swal.fire({
     title: `El total es $${totalCalculado}, para completar tu compra dejanos un número de teléfono y tu nombre ¡te contactaremos a la brevedad!`,
     html:
-      '<label for="floatingTextarea2">Teléfono</label><input id="swal-input1" class="swal2-input">' +
-      '<label for="floatingTextarea2">Nombre</label><input id="swal-input2" class="swal2-input">',
+      '<input type="number" id="swal-input1" class="swal2-input" placeholder="Teléfono">' +
+      '<input type="text" id="swal-input2" class="swal2-input" placeholder="Nombre">',
     focusConfirm: false,
     preConfirm: () => {
       return [
