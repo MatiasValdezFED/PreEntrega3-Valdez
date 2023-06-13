@@ -248,6 +248,11 @@ ul {
   padding-bottom: 2rem;
 }
 
+@media (max-width: 1024px) {
+  h2 {
+    height: 100px;
+  }
+}
 /* Dispositivo mediano */
 @media (max-width: 768px) {
   .productos__grid {

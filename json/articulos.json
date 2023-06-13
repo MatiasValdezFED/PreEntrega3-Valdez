@@ -94,5 +94,69 @@
       "categoria": "Lanas",
       "imagen": "../assets/Productos/Lana semigorda 4-7.jpg",
       "descripcion": "Lana semigorda 4-7"
+    },
+    {
+      "id": 13,
+      "nombreProducto": "Cierre",
+      "precio": 400,
+      "categoria": "Cierres",
+      "imagen": "../assets/Productos/Cierres.jpg",
+      "descripcion": "Cierres"
+    },
+    {
+      "id": 14,
+      "nombreProducto": "Galón Pompón",
+      "precio": 700,
+      "categoria": "Galones",
+      "imagen": "../assets/Productos/Galón pompón.jpg",
+      "descripcion": "Galón pompón"
+    },
+    {
+      "id": 15,
+      "nombreProducto": "Hilo de 27 Hebras",
+      "precio": 350,
+      "categoria": "Hilos",
+      "imagen": "../assets/Productos/Hilo de algodón de 27 hebras para macramé.jpg",
+      "descripcion": "Hilo de algodón de 27 hebras para macramé"
+    },
+    {
+      "id": 16,
+      "nombreProducto": "Hilo de yute",
+      "precio": 500,
+      "categoria": "Hilos",
+      "imagen": "../assets/Productos/Hilo de yute.jpg",
+      "descripcion": "Hilo de yute"
+    },
+    {
+      "id": 17,
+      "nombreProducto": "Lana Cake",
+      "precio": 500,
+      "categoria": "Lanas",
+      "imagen": "../assets/Productos/Lana Cake x 150 gs.jpg",
+      "descripcion": "Lana Cake x 150 gs"
+    },
+    {
+      "id": 18,
+      "nombreProducto": "Lana fina 2-7",
+      "precio": 450,
+      "categoria": "Lanas",
+      "imagen": "../assets/Productos/Lana fina 2-7.jpg",
+      "descripcion": "Lana fina 2-7"
+    },
+    {
+      "id": 19,
+      "nombreProducto": "Regla para modista",
+      "precio": 450,
+      "categoria": "Tejeduría",
+      "imagen": "../assets/Productos/Regla para modista.jpg",
+      "descripcion": "Regla para modista"
+    },
+    {
+      "id": 20,
+      "nombreProducto": "Tijeras",
+      "precio": 800,
+      "categoria": "Tejeduría",
+      "imagen": "../assets/Productos/Tijeras.jpg",
+      "descripcion": "Tijeras"
     }
   ]
