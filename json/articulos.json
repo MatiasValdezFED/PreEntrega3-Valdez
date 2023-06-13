@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "nombreProducto": "Elástico para boxer",
+    "nombreProducto": "Elástico",
     "precio": 200,
     "categoria": "Elásticos",
     "imagen": "../assets/Productos/Elástico para boxer.jpg",
@@ -33,7 +33,7 @@
   },
   {
     "id": 5,
-    "nombreProducto": "Avío para lencería",
+    "nombreProducto": "Avío",
     "precio": 20,
     "categoria": "Lencería",
     "imagen": "../assets/Productos/Avíos.jpg",
@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "nombreProducto": "Rueda de alfileres largos",
+    "nombreProducto": "Rueda de Alfileres Largos",
     "precio": 300,
     "categoria": "Alfileres",
     "imagen": "../assets/Productos/Rueda de alfileres largos.jpg",
@@ -65,7 +65,7 @@
   },
   {
     "id": 9,
-    "nombreProducto": "Cierre reforzado por metro",
+    "nombreProducto": "Cierre Reforzado (Metro)",
     "precio": 380,
     "categoria": "Cierres",
     "imagen": "../assets/Productos/Cierre reforzado x metro.jpg",
@@ -81,7 +81,7 @@
   },
   {
     "id": 11,
-    "nombreProducto": "Cuentas de madera",
+    "nombreProducto": "Cuentas de Madera",
     "precio": 150,
     "categoria": "Artesanías",
     "imagen": "../assets/Productos/Cuentas de madera.jpg",
@@ -89,7 +89,7 @@
   },
   {
     "id": 12,
-    "nombreProducto": "Lana semigorda 4-7",
+    "nombreProducto": "Lana Semigorda 4-7",
     "precio": 500,
     "categoria": "Lanas",
     "imagen": "../assets/Productos/Lana semigorda 4-7.jpg",
@@ -121,7 +121,7 @@
   },
   {
     "id": 16,
-    "nombreProducto": "Hilo de yute",
+    "nombreProducto": "Hilo de Yute",
     "precio": 500,
     "categoria": "Hilos",
     "imagen": "../assets/Productos/Hilo de yute.jpg",
@@ -137,7 +137,7 @@
   },
   {
     "id": 18,
-    "nombreProducto": "Lana fina 2-7",
+    "nombreProducto": "Lana Fina 2-7",
     "precio": 450,
     "categoria": "Lanas",
     "imagen": "../assets/Productos/Lana fina 2-7.jpg",
@@ -145,7 +145,7 @@
   },
   {
     "id": 19,
-    "nombreProducto": "Regla para modista",
+    "nombreProducto": "Regla para Modista",
     "precio": 450,
     "categoria": "Tejeduría",
     "imagen": "../assets/Productos/Regla para modista.jpg",
