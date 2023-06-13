@@ -104,6 +104,7 @@ function cerrarCarrito() {
 }
 
 botonCerrarCarrito.addEventListener("click", cerrarCarrito);
+pageCover.addEventListener("click", cerrarCarrito);
 
 // Eliminar del carrito
 

@@ -36,27 +36,27 @@ crearProductos();
 
 // Buscador de Artículos
 
-const buscarArticulos = document.querySelector(".inputSearch");
+// const buscarArticulos = document.querySelector(".inputSearch");
 
-function filtrar() {
-  productosGrid.innerHTML = "";
+// function filtrar() {
+//   productosGrid.innerHTML = "";
 
-  const texto = buscarArticulos.value.toLowerCase();
-  for (let articulo of articulos) {
-    let nombre = articulo.nombreProducto.toLowerCase();
-    if (nombre.indexOf(texto) !== -1) {
-      crearProductos();
-    } else {
-      innerHTML = `
-      <section class="productos__grid" id="productos__grid">
-       <h2>Producto no encontrado...</h2>
-      </section>
-                  `;
-    }
-  }
-}
+//   const texto = buscarArticulos.value.toLowerCase();
+//   for (let articulo of articulos) {
+//     let nombre = articulo.nombreProducto.toLowerCase();
+//     if (nombre.indexOf(texto) !== -1) {
+//       crearProductos();
+//     } else {
+//       innerHTML = `
+//       <section class="productos__grid" id="productos__grid">
+//        <h2>Producto no encontrado...</h2>
+//       </section>
+//                   `;
+//     }
+//   }
+// }
 
-buscarArticulos.addEventListener("keyup", filtrar);
+// buscarArticulos.addEventListener("keyup", filtrar);
 
 //Agregar artículos al carrito
 
