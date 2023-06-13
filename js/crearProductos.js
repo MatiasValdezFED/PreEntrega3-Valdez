@@ -34,6 +34,24 @@ function crearProductos() {
 
 crearProductos();
 
+// Buscador de Artículos
+
+const buscarArticulos = document.querySelector(".inputSearch");
+
+function filtrar() {
+  productosGrid.innerHTML = "";
+
+  const texto = buscarArticulos.value.toLowerCase();
+  for (let articulo of articulos) {
+    let nombre = articulo.nombreProducto.toLowerCase();
+    if (nombre.indexOf(texto) !== -1) {
+      crearProductos();
+    }
+  }
+}
+
+buscarArticulos.addEventListener("keyup", filtrar);
+
 //Agregar artículos al carrito
 
 function agregarArticulos() {

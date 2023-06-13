@@ -196,8 +196,7 @@ botonFinalizar.addEventListener("click", function () {
     cargarArticulosCarrito();
     actualizarContador(carritoArticulo);
   }
-  if (formValues) {
-    Swal.fire(JSON.stringify(formValues));
-  }
+  formValues && Swal.fire(JSON.stringify(formValues));
+
   cerrarCarrito();
 });
