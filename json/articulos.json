@@ -158,5 +158,53 @@
     "categoria": "Tejeduría",
     "imagen": "../assets/Productos/Tijeras.jpg",
     "descripcion": "Tijeras"
+  },
+  {
+    "id": 21,
+    "nombreProducto": "Hilo de Algodón",
+    "precio": 450,
+    "categoria": "Hilos",
+    "imagen": "../assets/Productos/Hilo algodon.jpg",
+    "descripcion": "Hilo algodón para macramé de color , bobina x 100 mtrs"
+  },
+  {
+    "id": 22,
+    "nombreProducto": "Hilo de Coser",
+    "precio": 500,
+    "categoria": "Hilos",
+    "imagen": "../assets/Productos/Hilo de coser.jpg",
+    "descripcion": "Hilo de coser x 2000 mtrs"
+  },
+  {
+    "id": 23,
+    "nombreProducto": "Set de Jardín",
+    "precio": 600,
+    "categoria": "Tejeduría",
+    "imagen": "../assets/Productos/Set de jardin.jpg",
+    "descripcion": "Set de jardín"
+  },
+  {
+    "id": 24,
+    "nombreProducto": "Patrón para Bordado",
+    "precio": 450,
+    "categoria": "Tejeduría",
+    "imagen": "../assets/Productos/Patron para bordado.jpg",
+    "descripcion": "Patrón para bordado"
+  },
+  {
+    "id": 25,
+    "nombreProducto": "Hilo de Coser",
+    "precio": 350,
+    "categoria": "Hilos",
+    "imagen": "../assets/Productos/Hilo de coser2.jpg",
+    "descripcion": "Hilo de coser, bobina 100 mtrs"
+  },
+  {
+    "id": 26,
+    "nombreProducto": "Aguja Crochet",
+    "precio": 330,
+    "categoria": "Tejeduría",
+    "imagen": "../assets/Productos/Aguja Crochet.jpg",
+    "descripcion": "Aguja Crochet"
   }
 ]
