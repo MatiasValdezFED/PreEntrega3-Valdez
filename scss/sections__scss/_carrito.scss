@@ -22,6 +22,7 @@ a{
 .modal__container {
     width: 50%;
     padding: 2rem;
+    padding-top: 18PX;
     margin: 100px;
     margin-left: 500px;
     border-radius: 4rem;
@@ -30,14 +31,16 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*for the top*/
     position: fixed;
-     overflow: auto;
+    overflow-y: scroll;
+    max-height: 630px;
     z-index: 9;
     top: 12vh;
-    scrollbar-color: none;
-
   }
+
+  .modal__container::-webkit-scrollbar {
+     display: none;
+   } 
 
 .conteiner__closeButton{
     width: 100%;

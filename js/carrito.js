@@ -164,7 +164,7 @@ function actualizarTotal() {
 
 botonFinalizar.addEventListener("click", function () {
   const { value: formValues } = Swal.fire({
-    title: `El total es ${totalCalculado}, para completar tu compra dejanos un número de teléfono y tu nombre ¡te contactaremos a la brevedad!`,
+    title: `El total es $${totalCalculado}, para completar tu compra dejanos un número de teléfono y tu nombre ¡te contactaremos a la brevedad!`,
     html:
       '<label for="floatingTextarea2">Teléfono</label><input id="swal-input1" class="swal2-input">' +
       '<label for="floatingTextarea2">Nombre</label><input id="swal-input2" class="swal2-input">',
