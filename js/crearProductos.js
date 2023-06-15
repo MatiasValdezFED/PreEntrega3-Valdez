@@ -46,7 +46,7 @@ function filtrar() {
 
   for (let arti of articulos) {
     let nombre = arti.nombreProducto.toLowerCase();
-    if (nombre.indexOf(texto) !== -1) {
+    if (nombre.includes(texto)) {
       const article = document.createElement("article");
       article.classList.add("producto");
       article.innerHTML = `
@@ -60,7 +60,7 @@ function filtrar() {
     }
   }
   agregarArticulos();
-  if (!articuloEncontrado) {
+  !articuloEncontrado &&
     Toastify({
       text: "Artículo no encontrado",
       className: "info",
@@ -69,7 +69,6 @@ function filtrar() {
         background: "linear-gradient(to right, red, red)",
       },
     }).showToast();
-  }
 }
 
 buscarArticulos.addEventListener("keyup", filtrar);
