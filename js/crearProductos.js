@@ -36,27 +36,43 @@ crearProductos();
 
 // Buscador de Artículos
 
-// const buscarArticulos = document.querySelector(".inputSearch");
+const buscarArticulos = document.querySelector(".inputSearch");
 
-// function filtrar() {
-//   productosGrid.innerHTML = "";
+function filtrar() {
+  productosGrid.innerHTML = "";
 
-//   const texto = buscarArticulos.value.toLowerCase();
-//   for (let articulo of articulos) {
-//     let nombre = articulo.nombreProducto.toLowerCase();
-//     if (nombre.indexOf(texto) !== -1) {
-//       crearProductos();
-//     } else {
-//       innerHTML = `
-//       <section class="productos__grid" id="productos__grid">
-//        <h2>Producto no encontrado...</h2>
-//       </section>
-//                   `;
-//     }
-//   }
-// }
+  const texto = buscarArticulos.value.toLowerCase();
+  let articuloEncontrado = false;
 
-// buscarArticulos.addEventListener("keyup", filtrar);
+  for (let arti of articulos) {
+    let nombre = arti.nombreProducto.toLowerCase();
+    if (nombre.indexOf(texto) !== -1) {
+      const article = document.createElement("article");
+      article.classList.add("producto");
+      article.innerHTML = `
+    <h2>${arti.nombreProducto}</h2>
+        <img src="${arti.imagen}" alt="${arti.nombreProducto}">
+        <div>$${arti.precio}</div>
+        <button class="carrito__2 botonAgregar" id=${arti.id}>AGREGAR AL CARRITO</button>
+    `;
+      productosGrid.append(article);
+      articuloEncontrado = true;
+    }
+  }
+  if (!articuloEncontrado) {
+    Toastify({
+      text: "Artículo no encontrado",
+      className: "info",
+      position: "center",
+      timer: 200,
+      style: {
+        background: "linear-gradient(to right, red, red)",
+      },
+    }).showToast();
+  }
+}
+
+buscarArticulos.addEventListener("keyup", filtrar);
 
 //Agregar artículos al carrito
 

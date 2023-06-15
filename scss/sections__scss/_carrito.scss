@@ -126,12 +126,44 @@ a{
 }
 
 
- @media (max-width: 1024px) {
+
+ @media (min-width: 2560px) {
 
      .modal__container {
-         width: 70%;
-         margin-left: 200px;
+         margin-left: 685px;
        }
+
+ }
+
+ @media (max-width: 1440px) {
+
+     .modal__container {
+         margin-left: 372px;
+       }
+
+ }
+
+
+ @media (max-width: 1024px) {
+
+    .modal__container {
+        width: 70%;
+        margin-left: 200px;
+
+        h2 {
+            font-size: 25px;
+           }
+
+        h3 {
+            font-size: 19px;
+           }
+
+       }
+    
+    .carrito__acciones{
+        font-size: 15px;
+    }
+       
 
  }
 
@@ -140,9 +172,81 @@ a{
     .modal__container {
         width: 90%;
         margin-left: 40px;
-      }
+
+        h2 {
+           font-size: 23px;
+           }
+
+        h3 {
+            font-size: 17px;
+           }   
+    }
+
+    .articulo__carrito{
+        width: 600px;
+        height: 82px;
+    }
+
+    .carrito__acciones{
+        font-size: 13px;
+    }
 
 }
 
 
 
+@media (max-width: 425px) {
+
+    .modal__container {
+        width: 97%;
+        margin-left: 6px;
+
+        h2 {
+           font-size: 18px;
+           }
+
+        h3 {
+            font-size: 13px;
+           }   
+    }
+
+    .articulo__carrito{
+        width: 387px;
+        height: 88px;
+        
+        .articulo__carrito__titulo{
+            margin: 10px;
+            margin-right: 5px;
+            padding-right: 60px;
+        }
+
+        .articulo__carrito__cantidad{
+            margin: 15px;
+        }
+
+        .articulo__carrito__precioUnitario{
+            margin: 10px;
+        }
+
+        .articulo__carrito__Subtotal{
+            margin: 10px;
+        }
+
+        small{
+            font-size: 10px;
+        }
+       
+    }
+
+    .carrito__acciones{
+        font-size: 13px;
+        margin: 15px;
+
+        .carrito__acciones__vaciar{
+            margin: 15px;
+        }
+
+        .carrito__acciones__comprar {
+            margin: 15px;
+    }
+}}
