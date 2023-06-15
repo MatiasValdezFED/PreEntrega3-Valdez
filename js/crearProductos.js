@@ -58,6 +58,7 @@ function filtrar() {
       productosGrid.append(article);
       articuloEncontrado = true;
     }
+    agregarArticulos();
   }
   if (!articuloEncontrado) {
     Toastify({
