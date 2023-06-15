@@ -58,14 +58,13 @@ function filtrar() {
       productosGrid.append(article);
       articuloEncontrado = true;
     }
-    agregarArticulos();
   }
+  agregarArticulos();
   if (!articuloEncontrado) {
     Toastify({
       text: "Artículo no encontrado",
       className: "info",
       position: "center",
-      timer: 200,
       style: {
         background: "linear-gradient(to right, red, red)",
       },
