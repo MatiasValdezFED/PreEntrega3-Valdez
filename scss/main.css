@@ -545,8 +545,18 @@ a {
   max-height: 630px;
   z-index: 9;
   top: 12vh;
+  animation-name: modal;
+  animation-duration: 0.5s;
 }
 
+@keyframes modal {
+  from {
+    transform: translateY(50vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .modal__container::-webkit-scrollbar {
   display: none;
 }
