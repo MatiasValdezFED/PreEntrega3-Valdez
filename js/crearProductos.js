@@ -60,15 +60,10 @@ function filtrar() {
     }
   }
   agregarArticulos();
-  !articuloEncontrado &&
-    Toastify({
-      text: "Artículo no encontrado",
-      className: "info",
-      position: "center",
-      style: {
-        background: "linear-gradient(to right, red, red)",
-      },
-    }).showToast();
+  if (!articuloEncontrado) {
+    productosGrid.style.padding = "5rem";
+    productosGrid.innerHTML = "<p>Artículo no encontrado :(</p>";
+  }
 }
 
 buscarArticulos.addEventListener("keyup", filtrar);
