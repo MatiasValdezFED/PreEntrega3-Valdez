@@ -8,6 +8,7 @@ width: 1200px;
 margin: auto;
 padding: 10px;
 font-size: 18px;
+width: 750px;
     }
 }
 
@@ -64,6 +65,9 @@ h2 {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .ctn-barSearch input{
+        width: 75%;
+    }
 }
 
 /* Dispositivo mobile */
@@ -73,4 +77,9 @@ h2 {
     .productos__grid {
         grid-template-columns: repeat(1, 1fr);
     }
+    
+    .ctn-barSearch input{
+        width: 100%;
+    }
+
 }
