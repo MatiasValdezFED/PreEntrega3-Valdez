@@ -21,10 +21,15 @@ function crearProductos() {
       const article = document.createElement("article");
       article.classList.add("producto");
       article.innerHTML = `
-    <h2>${articulo.nombreProducto}</h2>
-        <img src="${articulo.imagen}" alt="${articulo.nombreProducto}">
-        <div>$${articulo.precio}</div>
-        <button class="carrito__2 botonAgregar" id=${articulo.id}>AGREGAR AL CARRITO</button>
+        <div class="card" style="width: 18rem;">
+  <img src="${articulo.imagen}" class="card-img-top" alt="${articulo.nombreProducto}">
+  <div class="card-body">
+    <h5 class="card-title">${articulo.nombreProducto}</h5>
+    <p class="card-text">${articulo.descripcion}</p>
+    <div>$${articulo.precio}</div>
+    <button class="btn btn-primary carrito__2 botonAgregar" id=${articulo.id}>Agregar al Carrito</button>
+  </div>
+</div>
     `;
       productosGrid.append(article);
     });
