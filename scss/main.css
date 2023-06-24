@@ -497,6 +497,10 @@ ul {
   color: red;
 }
 
+.textContainer {
+  width: 650px;
+}
+
 .accordion {
   --bs-accordion-btn-bg: rgb(245, 237, 244);
   --bs-accordion-active-color: white;
