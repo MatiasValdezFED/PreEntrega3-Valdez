@@ -235,7 +235,7 @@ ul {
   display: block;
 }
 .producto .card {
-  box-shadow: 20px -10px #72002e;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .producto div {
   margin: auto;
@@ -253,7 +253,9 @@ ul {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 3rem;
+  border-radius: 0;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
 }
 
 .carrito__2 {

@@ -20,7 +20,7 @@ width: 750px;
     display: block;
     
     .card{
-        box-shadow: 20px -10px #72002e;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
     div {
@@ -43,7 +43,9 @@ width: 750px;
         width: 100%;
         height: 300px;
         object-fit: cover;
-        border-radius: 3rem;
+        border-radius: 0;
+        border-top-left-radius: 3rem;
+        border-top-right-radius: 3rem;
     }
 }
 
