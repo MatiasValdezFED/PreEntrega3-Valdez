@@ -644,11 +644,13 @@ a {
 .precio__total {
   font-weight: bold;
   display: flex;
+  margin: 4px;
 }
 
 .carrito__acciones {
   display: flex;
   justify-content: space-between;
+  padding-top: 30px;
 }
 
 .carrito__acciones__vaciar {
@@ -701,6 +703,9 @@ a {
   .carrito__acciones {
     font-size: 15px;
   }
+  div:where(.swal2-container) .swal2-html-container {
+    margin: 6em 1.6em 0.3em;
+  }
 }
 @media (max-width: 768px) {
   .modal__container {
@@ -727,18 +732,25 @@ a {
     margin-left: 6px;
   }
   .modal__container h2 {
-    font-size: 18px;
+    font-size: 20px;
+    margin-bottom: -50px;
+    margin-top: 7px;
   }
   .modal__container h3 {
     font-size: 13px;
   }
+  .conteiner__closeButton {
+    margin: 30px;
+    margin-top: -4px;
+  }
   .articulo__carrito {
-    width: 387px;
+    width: 343px;
     height: 88px;
+    padding: 9px;
   }
   .articulo__carrito .articulo__carrito__titulo {
     margin: 10px;
-    margin-right: 5px;
+    margin-right: -75px;
     padding-right: 60px;
   }
   .articulo__carrito .articulo__carrito__cantidad {
@@ -755,12 +767,39 @@ a {
   }
   .carrito__acciones {
     font-size: 13px;
-    margin: 15px;
+    margin: -15px;
   }
   .carrito__acciones .carrito__acciones__vaciar {
     margin: 15px;
   }
   .carrito__acciones .carrito__acciones__comprar {
     margin: 15px;
+  }
+  div:where(.swal2-container) h2:where(.swal2-title) {
+    font-size: 25px;
+  }
+  div:where(.swal2-container) input:where(.swal2-input), div:where(.swal2-container) input:where(.swal2-file), div:where(.swal2-container) textarea:where(.swal2-textarea) {
+    font-size: 18px;
+  }
+}
+@media (max-width: 375px) {
+  div:where(.swal2-container) h2:where(.swal2-title) {
+    font-size: 23px;
+  }
+  div:where(.swal2-container) input:where(.swal2-input), div:where(.swal2-container) input:where(.swal2-file), div:where(.swal2-container) textarea:where(.swal2-textarea) {
+    font-size: 15px;
+  }
+}
+@media (max-width: 320px) {
+  .articulo__carrito {
+    width: 297px;
+    height: 85px;
+    padding: 4px;
+  }
+  div:where(.swal2-container) h2:where(.swal2-title) {
+    font-size: 22px;
+  }
+  div:where(.swal2-container) input:where(.swal2-input), div:where(.swal2-container) input:where(.swal2-file), div:where(.swal2-container) textarea:where(.swal2-textarea) {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=main.css.map */
