@@ -55,10 +55,15 @@ function filtrar() {
       const article = document.createElement("article");
       article.classList.add("producto");
       article.innerHTML = `
-    <h2>${arti.nombreProducto}</h2>
-        <img src="${arti.imagen}" alt="${arti.nombreProducto}">
+      <div class="card" style="width: 18rem;">
+      <img src="${arti.imagen}" class="card-img-top" alt="${arti.nombreProducto}">
+      <div class="card-body">
+        <h5 class="card-title">${arti.nombreProducto}</h5>
+        <p class="card-text">${arti.descripcion}</p>
         <div>$${arti.precio}</div>
-        <button class="carrito__2 botonAgregar" id=${arti.id}>AGREGAR AL CARRITO</button>
+        <button class="btn btn-primary carrito__2 botonAgregar" id=${arti.id}>Agregar al Carrito</button>
+      </div>
+    </div>
     `;
       productosGrid.append(article);
       articuloEncontrado = true;
